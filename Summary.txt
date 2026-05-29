@@ -1,0 +1,13 @@
+### Short Summary of Data Cleaning and Preprocessing
+
+* Loaded the Amazon dataset using Pandas.
+* Checked dataset structure, column names, and data types.
+* Identified and handled missing values using `fillna()`.
+* Removed duplicate records using `drop_duplicates()`.
+* Renamed column headers to lowercase and underscore format.
+* Cleaned currency columns by removing `₹` symbols and commas.
+* Converted price, rating, and discount columns into numeric data types.
+* Standardized text data by removing extra spaces and converting to lowercase.
+* Removed invalid records and ensured consistent formatting.
+* Verified the cleaned dataset using `info()` and `isnull().sum()`.
+* Saved the final cleaned dataset as `amazon_cleaned.csv`.
