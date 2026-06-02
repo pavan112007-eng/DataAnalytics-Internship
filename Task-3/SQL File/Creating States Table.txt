@@ -1,0 +1,4 @@
+CREATE TABLE states (
+    state_code VARCHAR(10),
+    region VARCHAR(50)
+);

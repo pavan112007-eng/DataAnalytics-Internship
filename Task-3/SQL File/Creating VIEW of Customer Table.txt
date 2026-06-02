@@ -1,0 +1,5 @@
+CREATE VIEW state_customer_count AS
+SELECT customer_state,
+       COUNT(*) AS total_customers
+FROM customer
+GROUP BY customer_state;

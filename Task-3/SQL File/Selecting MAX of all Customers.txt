@@ -1,0 +1,2 @@
+SELECT MAX(customer_zip_code_prefix)
+FROM customer;

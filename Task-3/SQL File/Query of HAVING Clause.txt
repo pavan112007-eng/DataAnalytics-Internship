@@ -1,0 +1,5 @@
+SELECT customer_state,
+       COUNT(*) AS total_customers
+FROM customer
+GROUP BY customer_state
+HAVING COUNT(*) > 1000;

@@ -1,0 +1,10 @@
+SELECT *
+FROM customer
+WHERE customer_state =
+(
+    SELECT customer_state
+    FROM customer
+    GROUP BY customer_state
+    ORDER BY COUNT(*) DESC
+    LIMIT 1
+);

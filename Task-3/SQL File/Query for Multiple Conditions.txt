@@ -1,0 +1,7 @@
+SELECT *
+FROM customer
+WHERE customer_state = 'SP'
+AND customer_city = 'sao paulo';
+
+
+

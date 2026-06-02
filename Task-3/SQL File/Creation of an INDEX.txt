@@ -1,0 +1,2 @@
+CREATE INDEX idx_state
+ON customer(customer_state);

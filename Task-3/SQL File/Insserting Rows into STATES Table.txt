@@ -1,0 +1,5 @@
+INSERT INTO states VALUES
+('SP','Southeast'),
+('RJ','Southeast'),
+('MG','Southeast'),
+('BA','Northeast');

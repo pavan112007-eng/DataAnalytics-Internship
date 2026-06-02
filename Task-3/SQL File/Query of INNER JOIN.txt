@@ -1,0 +1,6 @@
+SELECT c.customer_city,
+       c.customer_state,
+       s.region
+FROM customer c
+INNER JOIN states s
+ON c.customer_state = s.state_code;
