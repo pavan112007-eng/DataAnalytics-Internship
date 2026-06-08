@@ -1,0 +1,83 @@
+1) CREATE TABLE online_sales (
+    transaction_id INT,
+    order_date DATE,
+    product_category VARCHAR(100),
+    product_name VARCHAR(200),
+    units_sold INT,
+    unit_price NUMERIC(10,2),
+    total_revenue NUMERIC(12,2),
+    region VARCHAR(100),
+    payment_method VARCHAR(50)
+);
+
+
+2) SELECT *
+FROM online_sales
+LIMIT 10;
+
+
+3) SELECT
+SUM(total_revenue) AS total_sales
+FROM online_sales;
+
+
+4) SELECT
+COUNT(*) AS total_orders
+FROM online_sales;
+
+
+5) SELECT
+EXTRACT(MONTH FROM order_date) AS month,
+SUM(total_revenue) AS monthly_revenue
+FROM online_sales
+GROUP BY month
+ORDER BY month;
+
+
+6) SELECT
+EXTRACT(MONTH FROM order_date) AS month,
+COUNT(DISTINCT transaction_id) AS order_volume
+FROM online_sales
+GROUP BY month
+ORDER BY month;
+
+
+7) SELECT
+EXTRACT(YEAR FROM order_date) AS year,
+EXTRACT(MONTH FROM order_date) AS month,
+SUM(total_revenue) AS monthly_revenue,
+COUNT(DISTINCT transaction_id) AS order_volume
+FROM online_sales
+GROUP BY year, month
+ORDER BY year, month;
+
+
+8) SELECT
+product_category,
+SUM(total_revenue) AS revenue
+FROM online_sales
+GROUP BY product_category
+ORDER BY revenue DESC;
+
+
+9) SELECT
+region,
+SUM(total_revenue) AS revenue
+FROM online_sales
+GROUP BY region
+ORDER BY revenue DESC;
+
+
+10) SELECT
+EXTRACT(MONTH FROM order_date) AS month,
+SUM(total_revenue) AS revenue
+FROM online_sales
+GROUP BY month
+ORDER BY revenue DESC
+LIMIT 3;
+
+
+11) SELECT *
+FROM online_sales
+WHERE order_date BETWEEN '2024-01-01'
+AND '2024-06-30';
